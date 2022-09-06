@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { addContact } from "redux/actions";
+import { addContact } from "redux/contactsSlice";
 
-// import PropTypes from 'prop-types';
 import { ContactFormStyled, InputWrapper, InputLabel, Input, Button } from "./ContactForm.styled";
 
 
@@ -46,7 +45,6 @@ export function ContactForm() {
       number: number,
     };
     dispatch(addContact(contact));
-    // onFormSubmit(contact);
     reset();
   };
 
@@ -83,7 +81,3 @@ export function ContactForm() {
     </ContactFormStyled>
   );
 }
-
-// ContactForm.propTypes = {
-//   onFormSubmit: PropTypes.func.isRequired,
-// }

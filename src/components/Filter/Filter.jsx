@@ -1,8 +1,7 @@
 import { nanoid } from "nanoid";
 import { useSelector, useDispatch } from "react-redux";
-import { filterContacts } from "redux/actions";
+import { filterContacts } from "redux/contactsSlice";
 
-// import PropTypes from 'prop-types';
 import { FilterContainer, FilterLabel, FilterInput } from "./Filter.styled";
 
 
@@ -35,8 +34,3 @@ export const Filter = () => {
     </FilterContainer>
   );
 }
-
-// Filter.propTypes = {
-//   value: PropTypes.string.isRequired,
-//   onFilterChange: PropTypes.func.isRequired,
-// }
